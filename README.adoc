@@ -1,0 +1,32 @@
+= docker-node-web-app
+
+echo "# docker_web_app" >> README.adoc +
+ +
+basé sur le https://nodejs.org/de/docs/guides/nodejs-docker-webapp/[tuto] +
+ +
+- lister les images +
+docker images +
+ +
+- builder une images +
+docker build -t nodejs-app . +
+ +
+- lancer une image +
+docker run hello-world +
+ +
+- supprimer une image +
+docker image rm  -f <container id> +
+ +
+- Lancer l'image
+docker run -p 49160:8080 -d <your username>/node-web-app +
+ +
+- Print app output +
+docker logs <container id>
+ +
+- Enter the container +
+docker exec -it <container id> /bin/bash +
+ +
+List containers : +
+lister les dockers +
+docker ps +
+ +
+curl -i localhost:49160 +
